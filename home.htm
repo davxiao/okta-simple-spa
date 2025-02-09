@@ -6,7 +6,7 @@
 <style>
 body {
     font-family: sans-serif;
-    font-size: 13px;
+    font-size: 16px;
 }
 nav, .widget {
     margin: 24px;
@@ -65,12 +65,11 @@ ul {
 <span id=burger style='font-size: 24px;'>≡</span>
 <span id=notificationMenu style='float: right;'>🔔</span>
 <ul id=menu class=hide>
-<li><a href='/'>Gabriel Sroka</a>
-<li><a href='https://daxiao.oktapreview.com'>Okta Home</a>
-<li><span id=refresh>Refresh</span>
-<li><a href='/login.htm?signout'>Sign out</a>
-<li><a href='https://github.com/gabrielsroka/gabrielsroka.github.io/blob/master/home.htm' target=_blank>src</a>
-</ul>
+<li><a href='https://daxiao.oktapreview.com' target=_blank>My Okta Portal</a>
+<li><a href='https://github.com/davxiao/okta-simple-spa' target=_blank>Github</a>
+    <li><span id=refresh>Refresh</span>
+        <li><a href='/login.htm?signout'>Sign out</a>
+        </ul>
 </nav>
 <main>
 <div id=notifications class='widget hide'>
@@ -79,19 +78,13 @@ ul {
 </div>
 <div id=weather style='height: 80px;' class=widget>Loading <a href='https://www.google.com/search?q=weather'>weather</a>...</div>
 <div id=stocks class=widget>
-<table>
-<tr><td><a href='https://www.google.com/search?q=okta stock'>Okta</a><td>123.45
-<td><a href='https://www.google.com/search?q=aapl stock'>Apple</a><td>123.45
-<tr><td><a href='https://www.google.com/search?q=goog stock'>Google</a><td>123.45
-<td><a href='https://www.google.com/search?q=msft stock'>Microsoft</a><td>123.45
-</table>
 </div>
 <div id=apps></div>
 </main>
 <script>
 // For this to work, enable CORS in Okta: Security > API > Trusted Origins > Add Origin > CORS.
 const baseUrl = 'https://daxiao.oktapreview.com';
-const latlong = '33.6705004,-117.9198422'; // or use getPosition below...
+const latlong = '47.608013,-122.335167'; // or use getPosition below...
 const rssKey = 'bktpucfcehpay70oarqhspsrzyt9wbjebfvhqkwb'; // you need your own... they're free from https://rss2json.com and you can lock it to your domain
 
 onload = () => {
@@ -115,7 +108,8 @@ async function getLinks() {
            label[, url, icon]
        eg: "NY Times, nytimes.com", or just "NY Times"
        If url is blank, it will figure it out from the label. It will remove spaces, and add "https://" and ".com", etc.*/
-    apps.innerHTML = 'Loading...';
+    apps.innerHTML = '';
+    /*
     try {
         const init = {credentials: 'include'};
         // const init = {mode: 'cors'}; // This didn't seem to work.
@@ -138,6 +132,7 @@ async function getLinks() {
     } catch (e) {
         apps.innerHTML = e + ' error. <a href="/login.htm"><u>Sign in</u></a>. Are third-party/cross-site cookies enabled?';
     }
+        */
 }
 
 function showLinks(links) {
