@@ -1,5 +1,4 @@
-# gabrielsroka.github.io
+Forked from gabrielsroka.github.io
 
-https://gabrielsroka.github.io
+Modified for a different okta domain
 
-https://gabrielsroka.github.io/rockstar/ - Export Okta Users, Groups, etc. to CSV. Show SAML assertion.

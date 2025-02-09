@@ -9,7 +9,7 @@
 }(this, function () {
 
     return {
-      orgUrl: 'https://gsroka-neto.oktapreview.com',
+      orgUrl: 'https://daxiao.oktapreview.com',
       clientId: 'zmLPogFB78Yebob0XW8z',
       idp: '0oa5kecjfwuF4HQ4w0h7',
       scope: ['openid', 'email', 'profile', 'phone', 'groups']

@@ -55,7 +55,7 @@ onload = async function () {
         url = r.headers.get('link')?.match('<(.*)>; rel="next"')?.[1];
     }
 
-    const base = 'https://gsroka-neto.oktapreview.com';
+    const base = 'https://daxiao.oktapreview.com';
     const headers = {Authorization: 'Bearer invalidToken'};
 
     paths.sort((p1, p2) => (p1.path + p1.method).localeCompare(p2.path + p2.method));

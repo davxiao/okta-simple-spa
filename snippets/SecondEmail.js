@@ -1,6 +1,6 @@
 (async function () {
     // For this to work, enable CORS in Okta: Security > API > Trusted Origins > Add Origin > CORS.
-    const baseUrl = 'https://gsroka-neto.oktapreview.com';
+    const baseUrl = 'https://daxiao.oktapreview.com';
 
     const init = {
         credentials: 'include',

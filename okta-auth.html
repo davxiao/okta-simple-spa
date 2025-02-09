@@ -110,7 +110,7 @@
                         </div>
                         <div class="gsroka_inner_wrapper">
                             <!-- <h1>Sign In</h1> -->
-                            <div id="nojs" class="alert alert-danger" role="alert">The Javascript on your browser is not enabled. If you experience challenges signing in, <a href="https://gsroka-neto.oktapreview.com" style="color:#0000EE;">please click here.</a></div>
+                            <div id="nojs" class="alert alert-danger" role="alert">The Javascript on your browser is not enabled. If you experience challenges signing in, <a href="https://daxiao.oktapreview.com" style="color:#0000EE;">please click here.</a></div>
                             <div id="success" class="hidden alert alert-success" role="alert">it worked</div>
                             <div id="error" class="hidden alert alert-danger" role="alert">Login Failed. Try Again...</div>
                             <form id="loginForm">
@@ -187,33 +187,33 @@
             var fromU = getUrlVars().fromURI;
 
             if (window.location.href == "https://gabrielsroka.github.io/okta-auth.html" && (username.value.indexOf(internalSuffix) != -1)) {
-                url = 'https://gsroka-neto.oktapreview.com';
-                redirectUrl = 'https://gsroka-neto.oktapreview.com/app/UserHome'
+                url = 'https://daxiao.oktapreview.com';
+                redirectUrl = 'https://daxiao.oktapreview.com/app/UserHome'
                 console.log("home and internal\n\n\n")
             } else if (window.location.href == "https://gabrielsroka.github.io/okta-auth.html" && !(username.value.indexOf(internalSuffix) != -1)) {
-                url = 'https://gsroka-neto.oktapreview.com';
-                redirectUrl = 'https://gsroka-neto.oktapreview.com/app/UserHome'
+                url = 'https://daxiao.oktapreview.com';
+                redirectUrl = 'https://daxiao.oktapreview.com/app/UserHome'
                 console.log("home and external\n\n\n")
             } else {
 
                 if (username.value.indexOf(internalSuffix) != -1) {
-                    url = 'https://gsroka-neto.oktapreview.com';
+                    url = 'https://daxiao.oktapreview.com';
 
                     if (fromU.indexOf("external") != -1) {
                         console.log("Internal users with external apps");
-                        redirectUrl = encodeURI('https://gsroka-neto.oktapreview.com/app/gsrokaneto_asamlwizard_2/exk5cq14aqdp9GGo40h7/sso/saml?RelayState=' + fromU)
+                        redirectUrl = encodeURI('https://daxiao.oktapreview.com/app/gsrokaneto_asamlwizard_2/exk5cq14aqdp9GGo40h7/sso/saml?RelayState=' + fromU)
                         console.log('encoded redirectUrl')
                         console.log(redirectUrl)
                         console.log('encoded fromU')
                         console.log(fromU)
                     } else {
                         console.log("Internal users with internal apps")
-                        redirectUrl = 'https://gsroka-neto.oktapreview.com?fromURI=' + fromU;
+                        redirectUrl = 'https://daxiao.oktapreview.com?fromURI=' + fromU;
                     }
                 } else {
                     console.log("External users with external apps or external users with internal apps")
-                    url = 'https://gsroka-neto.oktapreview.com';
-                    redirectUrl = 'https://gsroka-neto.oktapreview.com?fromURI=' + fromU;
+                    url = 'https://daxiao.oktapreview.com';
+                    redirectUrl = 'https://daxiao.oktapreview.com?fromURI=' + fromU;
                 }
             }
             var authClient = new OktaAuth({
