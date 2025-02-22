@@ -29,12 +29,18 @@ const config = {
 const signIn = new OktaSignIn(config);
 
 if (location.search == "?signout") {
+/*
     function redirectToLogin() {
         location.href = "login.htm";
     }
     signIn.authClient.signOut()
         .then(redirectToLogin)
         .fail(redirectToLogin);
+*/
+    signIn.authClient.signOut({
+        clearTokensBeforeRedirect: true,
+        postLogoutRedirectUri: location.origin + (new URL(location).searchParams.get('from') || "/login.htm")
+    });
 } else {
     signIn.renderEl(
         {el: '#osw-container'},
@@ -66,5 +72,8 @@ if (location.search == "?signout") {
     });
 }
 </script>
+<pre id="mypre">
+
+</pre>
 </body>
 </html>

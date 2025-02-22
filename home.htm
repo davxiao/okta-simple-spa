@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<title>My Apps</title>
+<title>My App</title>
 <style>
 body {
     font-family: sans-serif;
@@ -136,10 +136,12 @@ async function getLinks() {
 }
 
 function showLinks(links) {
+/*
     const lis = links.map(link => `<li class='app-button-wrapper'>` +
         `<a href='${link.url}' target=_blank class='app-button' rel=noopener><img src='${link.icon || new URL(link.url).origin + '/favicon.ico'}' class='logo'/></a>` +
         `<p class='app-button-name'>${link.label}`);
     apps.innerHTML = `<ul>${lis.join('')}</ul>`;
+    */
 }
 
 async function getWeather() {
@@ -179,6 +181,7 @@ async function getForecast() {
 // }
 
 async function getNotifications() {
+/*
     const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://feeds.feedburner.com/OktaTrustRSS&api_key=${rssKey}&count=1`);
     const feed = await response.json();
     const item = feed.items[0];
@@ -199,6 +202,7 @@ async function getNotifications() {
         };
         notifications.classList.remove('hide');
     }
+        */
 }
 </script>
 </body>
